@@ -36,6 +36,10 @@ class Dashboard_c extends CI_Controller {
 		$this->load->view('general/footer');
 
 	}
+	function new_method(){
+		
+		echo "hello";
+	}
 
 
 
