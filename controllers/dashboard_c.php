@@ -39,6 +39,7 @@ class Dashboard_c extends CI_Controller {
 	function new_method(){
 		
 		echo "hello";
+		echo "whats up";
 	}
 
 
