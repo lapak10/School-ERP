@@ -1,37 +1,82 @@
-<footer id="footer"><div class="container_12">
+<footer id="footer">
+	<div class="container_12">
 		<div class="grid_12">
-    		<div class="footer-icon align-center"><a class="top" href="#top"></a></div>
+			<div class="footer-icon align-center">
+				<a class="top" href="#top"></a>
+			</div>
 		</div>
-    </div></footer>
- <!--! end of #container -->
+	</div>
+</footer>
+<!--! end of #container -->
 
 
-  <!-- JavaScript at the bottom for fast page loading -->
+<!-- JavaScript at the bottom for fast page loading -->
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="<?php echo $base_url; ?>assets/js/libs/jquery-1.6.2.min.js"></script>
-  
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script
+	src="<?php echo $base_url; ?>assets/js/libs/jquery-1.6.2.min.js"></script>
 
 
-  <!-- scripts concatenated and minified via ant build script-->
-  <script defer src="<?php echo $base_url; ?>assets/js/plugins.js"></script> <!-- lightweight wrapper for consolelog, optional -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery-ui-1.8.15.custom.min.js"></script> <!-- jQuery UI -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.notifications.js"></script> <!-- Notifications  -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.uniform.min.js"></script> <!-- Uniform (Look & Feel from forms) -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.validate.min.js"></script> <!-- Validation from forms -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.dataTables.min.js"></script> <!-- Tables -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.tipsy.js"></script> <!-- Tooltips -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/excanvas.js"></script> <!-- Charts -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.visualize.js"></script> <!-- Charts -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.slidernav.min.js"></script> <!-- Contact List -->
-  <script defer src="<?php echo $base_url; ?>assets/js/common.js"></script> <!-- Generic functions -->
-  <script defer src="<?php echo $base_url; ?>assets/js/script.js"></script> <!-- Generic scripts -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.jqplot.min.js"></script> <!-- jQplot js file -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jqplot.barRenderer.min.js"></script> <!-- jQplot js file -->
-  <script defer src="<?php echo $base_url; ?>assets/js/mylibs/jqplot.categoryAxisRenderer.min.js"></script> <!-- jQplot js file -->
-  
-  <script type="text/javascript">
-	$(document).ready(function() {
+
+<!-- scripts concatenated and minified via ant build script-->
+<script
+	defer src="<?php echo $base_url; ?>assets/js/plugins.js"></script>
+<!-- lightweight wrapper for consolelog, optional -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery-ui-1.8.15.custom.min.js"></script>
+<!-- jQuery UI -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.notifications.js"></script>
+<!-- Notifications  -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.uniform.min.js"></script>
+<!-- Uniform (Look & Feel from forms) -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.validate.min.js"></script>
+<!-- Validation from forms -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.dataTables.min.js"></script>
+<!-- Tables -->
+<script
+	defer src="<?php echo $base_url; ?>assets/js/mylibs/jquery.tipsy.js"></script>
+<!-- Tooltips -->
+<script
+	defer src="<?php echo $base_url; ?>assets/js/mylibs/excanvas.js"></script>
+<!-- Charts -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.visualize.js"></script>
+<!-- Charts -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.slidernav.min.js"></script>
+<!-- Contact List -->
+<script
+	defer src="<?php echo $base_url; ?>assets/js/common.js"></script>
+<!-- Generic functions -->
+<script
+	defer src="<?php echo $base_url; ?>assets/js/script.js"></script>
+<!-- Generic scripts -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jquery.jqplot.min.js"></script>
+<!-- jQplot js file -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jqplot.barRenderer.min.js"></script>
+<!-- jQplot js file -->
+<script
+	defer
+	src="<?php echo $base_url; ?>assets/js/mylibs/jqplot.categoryAxisRenderer.min.js"></script>
+<!-- jQplot js file -->
+
+<script type="text/javascript">
+	jQuery('document').ready(function($) {
 		
 		/*
 		 * Form Validation
@@ -149,7 +194,10 @@
 
 	/*
 	 * jQplot js code
-	 */
+	*/
+	var chart_div=$('#chart1');//Lets first take the div into a variable,to makes our script run faster.
+	//Before just blindly adding bar charts,lets check if its parent div exits or not,addOnlyWhenDiv is present.
+	if(chart_div.length){
 	$.jqplot.config.enablePlugins = true;
     var s1 = [2, 6, 7, 10];
     var ticks = ['Absent', 'Present', 'Leave', 'Other'];
@@ -209,17 +257,18 @@ $('#chart1_info').show('clip');
                     });
             }
         );
+	};
     
-	});
+    });
   </script>
-  <!-- end scripts-->
+<!-- end scripts-->
 
-  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
-  <!--[if lt IE 7 ]>
+<!--[if lt IE 7 ]>
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
-  
+
 </body>
 </html>

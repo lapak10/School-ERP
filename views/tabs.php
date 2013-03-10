@@ -92,6 +92,37 @@
 					</div>
 				</div>
 			</div>
+			<div class="grid_6">
+				<div class="block-border" id="tab-panel-2">
+					<div class="block-header">
+						<h1>Tabs #2</h1>
+						<ul class="tabs">
+							<li><a href="#tab-lorem">Lorem</a></li>
+							<li><a href="#tab-dolor">Dolor</a></li>
+							<li><a href="#tab-consectetur">Consectetur</a></li>
+						</ul>
+					</div>
+					<div class="block-content tab-container">
+						<div id="tab-lorem" class="tab-content">
+							<p>Tabcontent #1</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+								dolor in reprehenderit.</p>
+							<p>Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								Excepteur sint occaecat cupidatat non proident, sunt in culpa
+								qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<div id="tab-dolor" class="tab-content">
+							<p>Tabcontent #2</p>
+						</div>
+						<div id="tab-consectetur" class="tab-content">
+							<p>Tabcontent #3</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div class="clear height-fix"></div>
 
